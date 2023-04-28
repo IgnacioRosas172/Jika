@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "902260654484",
+    "project_id": "jika-64a82",
+    "storage_bucket": "jika-64a82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902260654484:android:5d9a0d84769796e85a0f81",
+        "android_client_info": {
+          "package_name": "com.progm.jika_e"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902260654484-alt2fp1fhboss1pn6si9uccrpi8v1vk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJeor8RiZTPM8zzXElJmvfnPRH4j6CIi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902260654484-alt2fp1fhboss1pn6si9uccrpi8v1vk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
