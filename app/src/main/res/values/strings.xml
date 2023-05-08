@@ -4,4 +4,16 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="title_1">Lección 1</string>
+    <string name="title_2">Lección 2</string>
+    <string name="title_3">Lección 3</string>
+    <string name="title_4">Lección 4</string>
+
+    <string name="text_1">El sonido K se escribe con c delante de a, o, u.</string>
+    <string name="text_2">El sonido K se escribe con el díagrafo delante de e, i.</string>
+    <string name="text_3">El sonido r suave se representa con una sola letra r.</string>
+    <string name="text_4">El sonido r fuerte entre vocales se representa con el díagrafo rr.</string>
+
+
 </resources>
