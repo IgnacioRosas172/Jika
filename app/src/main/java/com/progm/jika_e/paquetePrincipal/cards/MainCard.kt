@@ -2,6 +2,7 @@ package com.progm.jika_e.paquetePrincipal.cards
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -13,32 +14,37 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.progm.jika_e.R
 
-class MainCard : AppCompatActivity(), View.OnClickListener,
-    CompoundButton.OnCheckedChangeListener {
+import com.progm.jika_e.databinding.CardAdapterBinding
 
+import com.progm.jika_e.iniciomenu
+import com.progm.jika_e.paquetePrincipal.activities.MainEjercicios
+
+class MainCard : AppCompatActivity() {
+
+    private lateinit var binding: CardAdapterBinding
 
 
     private var mButton: Button? = null
     private var mViewPager: ViewPager? = null
-
     private var mCardAdapter: CardPagerAdapter? = null
     private var mCardShadowTransformer: ShadowTransformer? = null
     private var mFragmentCardAdapter: CardFragmentPagerAdapter? = null
     private var mFragmentCardShadowTransformer: ShadowTransformer? = null
-
     private var mShowingFragments = false
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = CardAdapterBinding.inflate(layoutInflater)
         setContentView(R.layout.card_ortografia)
 
         mViewPager = findViewById<View>(R.id.viewPager) as? ViewPager
-        mButton = findViewById<View>(R.id.cardTypeBtn) as? Button
-        (findViewById<CheckBox>(R.id.checkBox))?.setOnCheckedChangeListener(this)
-        mButton?.setOnClickListener(this)
 
-        val backButton: ImageButton = findViewById(R.id.imageViewBack)
+
+//        val backButton: ImageButton = findViewById(R.id.imageViewBack)
+
+        mButton = findViewById<View>(R.id.btnComenzar) as? Button
+
 
 
         mCardAdapter = CardPagerAdapter()
@@ -58,32 +64,14 @@ class MainCard : AppCompatActivity(), View.OnClickListener,
         mViewPager!!.setPageTransformer(false, mCardShadowTransformer)
         mViewPager!!.offscreenPageLimit = 3
 
-        backButton.setOnClickListener {
-            onBackPressed()
-        }
+        //backButton.setOnClickListener {
+        //      onBackPressed()
+        //   }
 
     }
 
 
 
-    override fun onClick(p0: View?) {
-        if (!mShowingFragments) {
-            mButton!!.text = "Views"
-            mViewPager!!.adapter = mFragmentCardAdapter
-            mViewPager!!.setPageTransformer(false, mFragmentCardShadowTransformer)
-        } else {
-            mButton!!.text = "Fragments"
-            mViewPager!!.adapter = mCardAdapter
-            mViewPager!!.setPageTransformer(false, mCardShadowTransformer)
-        }
-
-        mShowingFragments = !mShowingFragments
-    }
-
-    override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
-        mCardShadowTransformer!!.enableScaling(p1)
-        mFragmentCardShadowTransformer!!.enableScaling(p1)
-    }
 
     fun dpToPixels(dp: Int, context: Context): Float {
         return dp * context.resources.displayMetrics.density

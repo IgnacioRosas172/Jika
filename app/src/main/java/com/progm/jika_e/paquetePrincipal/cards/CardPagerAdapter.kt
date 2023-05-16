@@ -1,13 +1,19 @@
 package com.progm.jika_e.paquetePrincipal.cards
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager.widget.PagerAdapter
 import com.progm.jika_e.R
+import com.progm.jika_e.paquetePrincipal.activities.MainEjercicios
 import com.progm.jika_e.paquetePrincipal.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
+
 
 
 class CardPagerAdapter : PagerAdapter(), CardAdapter {
@@ -15,6 +21,13 @@ class CardPagerAdapter : PagerAdapter(), CardAdapter {
     private var mViews: ArrayList<CardView?>? = null
     private var mData: ArrayList<CardItem?>? = null
     private var mBaseElevation = 0f
+
+
+
+    private fun goToExercise(context: Context) {
+        val intent = Intent(context, MainEjercicios::class.java)
+        context.startActivity(intent)
+    }
 
     init {
         mData = ArrayList()
@@ -47,11 +60,15 @@ class CardPagerAdapter : PagerAdapter(), CardAdapter {
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view =
-            LayoutInflater.from(container.context).inflate(R.layout.card_adapter, container, false)
+        val view = LayoutInflater.from(container.context).inflate(R.layout.card_adapter, container, false)
         container.addView(view)
         bind(mData?.get(position)!!, view)
         val cardView = view.findViewById<CardView>(R.id.cardView)
+
+        val botnComenzar = view.findViewById<Button>(R.id.btnComenzar)
+        botnComenzar.setOnClickListener {
+            goToExercise(view.context)
+        }
 
         if (mBaseElevation.toInt() == 0) {
             mBaseElevation = cardView.cardElevation
@@ -72,5 +89,12 @@ class CardPagerAdapter : PagerAdapter(), CardAdapter {
         val contentTextView = view.findViewById<View>(R.id.contentTextView) as TextView
         titleTextView.setText(item.title)
         contentTextView.setText(item.text)
+
     }
+
+    fun abrirCardOrtografia(context: Context, view: View) {
+        val intent = Intent(context, MainEjercicios::class.java).apply{ }
+        context.startActivity(intent)
+    }
+
 }

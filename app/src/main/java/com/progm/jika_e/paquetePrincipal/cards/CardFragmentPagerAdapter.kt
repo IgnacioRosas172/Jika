@@ -21,6 +21,8 @@ class CardFragmentPagerAdapter(fm: FragmentManager?, baseElevation: Float) :
 
     }
 
+
+
     override fun getBaseElevation(): Float {
         return mBaseElevation
     }

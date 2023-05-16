@@ -22,6 +22,9 @@ class CardFragment: Fragment() {
         mCardView!!.setMaxCardElevation(mCardView!!.getCardElevation()
                 * CardAdapter.MAX_ELEVATION_FACTOR)
         return view
+
+
+
     }
     fun getCardView(): CardView? {
         return mCardView

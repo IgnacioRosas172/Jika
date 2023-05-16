@@ -54,11 +54,6 @@ class HomeFragment : Fragment() {
 
         }
 
-        fun abrirCardOrtografia(context: Context, view: View) {
-            val intent = Intent(context, MainCard::class.java).apply{ }
-            context.startActivity(intent)
-        }
-       // linearLayoutProfile?.setOnClickListener { goToProfile() }
 
         return root
     }
