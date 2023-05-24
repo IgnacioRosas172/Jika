@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.progm.jika_e.R
 import com.progm.jika_e.databinding.FragmentHomeBinding
+import com.progm.jika_e.paquetePrincipal.activities.ActividadInicioFonetica
 import com.progm.jika_e.paquetePrincipal.cards.MainCard
 
 
@@ -31,23 +32,27 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
         //linearLayoutProfile = view?.findViewById(R.id.linearLayoutProfile)
        // linearLayoutProfile = root.findViewById(R.id.linearLayoutProfile)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val btn: Button = root.findViewById(R.id.buttonOrtografia)
         btn.setOnClickListener {
-
             val intent: Intent = Intent(context, MainCard::class.java)
             startActivity(intent)
-
         }
+
+        val btnFone: Button = root.findViewById(R.id.button2)
+        btnFone.setOnClickListener {
+            val intent: Intent = Intent(context, ActividadInicioFonetica::class.java)
+            startActivity(intent)
+        }
+
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it

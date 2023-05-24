@@ -12,41 +12,45 @@
         android:theme="@style/Theme.JIKA_E"
         tools:targetApi="31">
         <activity
-            android:name="com.progm.jika_e.paquetePrincipal.activities.MainEjercicios"
+            android:name=".paquetePrincipal.activities.ActividadInicioFonetica"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizCuestionsR"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.MainEjercicios"
             android:exported="false"
             android:label="Main Ejercicios" />
         <activity
-            android:name="com.progm.jika_e.paquetePrincipal.activities.QuizQuestions"
+            android:name=".paquetePrincipal.activities.QuizQuestions"
             android:exported="false"
             android:label="Quiz Questions" />
         <activity
-            android:name="com.progm.jika_e.paquetePrincipal.activities.ResultActivity"
+            android:name=".paquetePrincipal.activities.ResultActivity"
             android:exported="false"
             android:label="Result activitie" />
         <activity
             android:name=".paquetePrincipal.cards.MainCard"
             android:exported="false"
-            android:label="Main card"/>
-
+            android:label="Main card" />
         <activity
             android:name=".iniciomenu"
             android:exported="false"
-            android:label="@string/title_activity_iniciomenu"
-            />
+            android:label="@string/title_activity_iniciomenu" />
         <activity
             android:name=".paquetePrincipal.activities.Inicio"
             android:exported="false" />
         <activity
             android:name=".paquetePrincipal.activities.ProfileActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.home.HomeFragment"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".ui.dashboard.DashboardFragment"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".paquetePrincipal.activities.RegisterActivity"
             android:exported="false" />
