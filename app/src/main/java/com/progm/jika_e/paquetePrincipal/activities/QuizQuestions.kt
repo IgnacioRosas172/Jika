@@ -59,6 +59,7 @@ class QuizQuestions : AppCompatActivity(), View.OnClickListener {
         val question = myQuestionsList!![myCurrentPos - 1]
 
 
+
         defaultOptionsView()
 
         if (myCurrentPos == myQuestionsList!!.size) {

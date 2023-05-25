@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.progm.jika_e.R
 import com.progm.jika_e.paquetePrincipal.activities.Question
+import com.progm.jika_e.paquetePrincipal.activities.QuestionSilaba
 
 object Constants{
     const val USER_NAME: String="user_name"
@@ -59,4 +60,52 @@ object Constants{
         questionsList.add(que5)
         return questionsList
     }
-}
+
+    fun getQuestionsSilaba(): ArrayList<QuestionSilaba>{
+        val questionsList=ArrayList<QuestionSilaba>()
+        val question1Silaba = QuestionSilaba(
+            1,"¿Cuál es la primera sílaba?",
+            R.drawable.saludo_sonido,
+            "Sa","Ca",
+            "Da","Ba",1)
+        questionsList.add(question1Silaba)
+
+        val question2Silaba = QuestionSilaba(
+            2, "¿Cuál es la segunda sílaba?",
+            R.drawable.trabajo,
+            "ga", "ba",
+            "Tra", "jo", 2
+        )
+        questionsList.add(question2Silaba)
+
+        // 3
+        val question3Silaba = QuestionSilaba(
+            3, "¿Cuál es la primera silaba?",
+            R.drawable.botella,
+            "ma", "te",
+            "lla", "bo", 4
+        )
+        questionsList.add(question3Silaba)
+
+        // 4
+        val que4Silaba = QuestionSilaba(
+            4, "¿Cuál es la tercera silaba?",
+            R.drawable.examen,
+            "xa", "ex",
+            "exa", "men", 4
+        )
+        questionsList.add(que4Silaba)
+
+        // 5
+        val que5Silaba = QuestionSilaba(
+            5, "¿Cuál es la segunda silaba?",
+            R.drawable.aprender,
+            "ap", "apre",
+            "pren", "der", 3
+        )
+        questionsList.add(que5Silaba)
+
+        return questionsList
+    }
+    }
+

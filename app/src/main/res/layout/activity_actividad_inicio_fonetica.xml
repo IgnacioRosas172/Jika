@@ -68,6 +68,117 @@
                     android:layout_height="1in"
                     android:layout_margin="5dp"
                     android:elevation="3dp"
+                    android:src="@drawable/letra_muda"/>
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:text="Letra muda"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="100dp"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnLetraMuda"
+                    android:layout_width="220dp"
+                    android:layout_height="50dp"
+                    android:text="Continuar"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="110dp"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/blackfondofuerte">
+
+                <ImageView
+                    android:layout_width="1in"
+                    android:layout_height="1in"
+                    android:layout_margin="5dp"
+                    android:elevation="3dp"
+                    android:src="@drawable/sonido"/>
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="100dp"
+                    android:text="Rasgos de los sonidos"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnRasgosSordos"
+                    android:layout_width="220dp"
+                    android:layout_height="50dp"
+                    android:text="Continuar"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="110dp"/>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/blackfondofuerte">
+
+                <ImageView
+                    android:layout_width="1in"
+                    android:layout_height="1in"
+                    android:layout_margin="5dp"
+                    android:elevation="3dp"
+                    android:src="@drawable/consonante"/>
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="100dp"
+                    android:text="Consonante sorda"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnConsonante"
+                    android:layout_width="220dp"
+                    android:layout_height="50dp"
+                    android:text="Continuar"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="110dp"/>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/blackfondofuerte">
+
+                <ImageView
+                    android:layout_width="1in"
+                    android:layout_height="1in"
+                    android:layout_margin="5dp"
+
+                    android:elevation="3dp"
                     />
 
 
@@ -79,87 +190,7 @@
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
-                    android:text="Circuito Precidentes - Ruiz Cortinez - Sauces"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
-                app:cardBackgroundColor="@color/blackfondofuerte">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-
-                    android:elevation="3dp"
-                   />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="@color/white"
-                    android:text="Campo de Tiro - Crystal - Mercado"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
-                app:cardBackgroundColor="@color/blackfondofuerte">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-                    android:elevation="3dp"
-                   />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="@color/white"
-                    android:text="Pastoresa - Murillo Vidal - Centro"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardElevation="5dp"
-                app:cardCornerRadius="5dp"
-                app:cardBackgroundColor="@color/blackfondofuerte">
-
-                <ImageView
-                    android:layout_width="1in"
-                    android:layout_height="1in"
-                    android:layout_margin="5dp"
-
-                    android:elevation="3dp"
-                    />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="1.1in"
-                    android:textSize="23sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="@color/white"
-                    android:text="Ruiz Cortines - Zona UV"/>
+                    android:text="Articulación"/>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

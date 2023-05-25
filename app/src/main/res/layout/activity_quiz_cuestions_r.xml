@@ -23,13 +23,12 @@
         android:textSize="22sp"
         android:text="What does this character sound like?"/>
 
-
-    <ImageView
+    <Button
         android:id="@+id/mainImage"
-        android:layout_width="262dp"
-        android:layout_height="155dp"
+        android:layout_width="240dp"
+        android:layout_height="190dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"/>
 
     <LinearLayout
         android:id="@+id/ll_progress_details"

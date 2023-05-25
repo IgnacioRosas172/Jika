@@ -1,12 +1,266 @@
 package com.progm.jika_e.paquetePrincipal.activities
 
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.view.WindowManager
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+import com.airbnb.lottie.LottieAnimationView
 import com.progm.jika_e.R
+import com.progm.jika_e.paquetePrincipal.constantes.Constants
+import com.progm.jika_e.databinding.ActivityQuizQuestionsBinding
+import android.media.MediaPlayer
+import android.widget.Button
+import android.widget.ImageView
 
-class QuizCuestionsR : AppCompatActivity() {
+class QuizCuestionsR : AppCompatActivity(), View.OnClickListener {
+
+    private var mediaPlayer: MediaPlayer? = null
+
+    private var isFirstQuestionDisplayed = false
+    private var terceraReproduccion = false
+    private var cuartaReproduccion = false
+    private var quintaReproduccion = false
+    private var segundaReproduccion = false
+
+
+
+    private lateinit var animationView: LottieAnimationView
+
+    private var myCurrentPos: Int = 1
+    private var myQuestionsList: ArrayList<QuestionSilaba>? = null
+    private var mySelectedPos: Int = 0
+    private var myCorrectAns: Int = 0
+    private var myUsername: String? = null
+
+    private lateinit var binding:ActivityQuizQuestionsBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_cuestions_r)
+        binding = ActivityQuizQuestionsBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        myUsername = intent.getStringExtra(Constants.USER_NAME)
+
+        myQuestionsList = Constants.getQuestionsSilaba()
+
+        setQuestion()
+
+        binding.optionOne.setOnClickListener(this)
+        binding.optionTwo.setOnClickListener(this)
+        binding.optionThree.setOnClickListener(this)
+        binding.optionFour.setOnClickListener(this)
+        binding.submitButton.setOnClickListener(this)
+
+        val btnPlayAudio: ImageView = findViewById(R.id.mainImage)
+        btnPlayAudio.setOnClickListener {
+            //playAudio()
+        }
+    }
+
+    private fun playAudio() {
+        mediaPlayer = MediaPlayer.create(this, R.raw.saludo)
+        mediaPlayer?.start()
+        mediaPlayer?.setOnCompletionListener {
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+    }
+    private fun playAudioTrabajo() {
+        mediaPlayer = MediaPlayer.create(this, R.raw.trabajo)
+        mediaPlayer?.start()
+        mediaPlayer?.setOnCompletionListener {
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+    }
+
+    private fun playAudioBotella() {
+        mediaPlayer = MediaPlayer.create(this, R.raw.botella)
+        mediaPlayer?.start()
+        mediaPlayer?.setOnCompletionListener {
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+    }
+    private fun playAudioExamen() {
+        mediaPlayer = MediaPlayer.create(this, R.raw.examen)
+        mediaPlayer?.start()
+        mediaPlayer?.setOnCompletionListener {
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+    }
+    private fun playAudioAprender() {
+        mediaPlayer = MediaPlayer.create(this, R.raw.aprender)
+        mediaPlayer?.start()
+        mediaPlayer?.setOnCompletionListener {
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
+
+    private fun setQuestion() {
+        val question = myQuestionsList!![myCurrentPos - 1]
+
+        defaultOptionsView()
+
+        if (myCurrentPos == myQuestionsList!!.size) {
+            binding.submitButton.text = "Termminar"
+        } else {
+            binding.submitButton.text = "Comprobar"
+        }
+
+        binding.progressBar.progress = myCurrentPos
+        binding.qProgress.text = "$myCurrentPos/${binding.progressBar.max}"
+
+        binding.mainQuestion.text = question!!.question
+        binding.mainImage.setImageResource(question.image)
+        binding.optionOne.text = question.optionOne
+        binding.optionTwo.text = question.optionTwo
+        binding.optionThree.text = question.optionThree
+        binding.optionFour.text = question.optionFour
+
+        if (myCurrentPos == 1 && !isFirstQuestionDisplayed) {
+            playAudio()
+            isFirstQuestionDisplayed = true
+        }
+        if (myCurrentPos == 2 && !segundaReproduccion) {
+            playAudioTrabajo()
+            segundaReproduccion = true
+        }
+        if (myCurrentPos == 3 && !terceraReproduccion) {
+            playAudioBotella()
+            terceraReproduccion = true
+        }
+        if (myCurrentPos == 4 && !cuartaReproduccion) {
+            playAudioExamen()
+            cuartaReproduccion = true
+        }
+        if (myCurrentPos == 5 && !quintaReproduccion) {
+            playAudioAprender()
+            quintaReproduccion = true
+        }
+    }
+
+
+    private fun defaultOptionsView() {
+        val options = arrayListOf<TextView>(
+            binding.optionOne,
+            binding.optionTwo,
+            binding.optionThree,
+            binding.optionFour
+        )
+
+        for (option in options) {
+            option.setTextColor(Color.parseColor("#363A43"))
+            option.typeface = Typeface.DEFAULT
+            option.background = ContextCompat.getDrawable(
+                this,
+                R.drawable.default_option_border_bg
+            )
+        }
+    }
+
+    private fun selectedOptionView(tv: TextView, selectedNum: Int) {
+        defaultOptionsView()
+        mySelectedPos = selectedNum
+        tv.setTextColor(Color.parseColor("#363A43"))
+        tv.setTypeface(tv.typeface, Typeface.BOLD)
+        tv.background = ContextCompat.getDrawable(
+            this,
+            R.drawable.default_option_border_bg
+        )
+    }
+
+    private fun answerView(answer: Int, drawView: Int) {
+        when (answer) {
+            1 -> {
+                binding.optionOne.background = ContextCompat.getDrawable(
+                    this, drawView
+                )
+            }
+            2 -> {
+                binding.optionTwo.background = ContextCompat.getDrawable(
+                    this, drawView
+                )
+            }
+            3 -> {
+                binding.optionThree.background = ContextCompat.getDrawable(
+                    this, drawView
+                )
+            }
+            4 -> {
+                binding.optionFour.background = ContextCompat.getDrawable(
+                    this, drawView
+                )
+            }
+        }
+    }
+
+    override fun onClick(v:View?) {
+        when (v?.id) {
+            R.id.option_One -> {
+                selectedOptionView(binding.optionOne, 1)
+            }
+            R.id.option_Two -> {
+                selectedOptionView(binding.optionTwo, 2)
+            }
+            R.id.option_Three -> {
+                selectedOptionView(binding.optionThree, 3)
+            }
+            R.id.option_Four -> {
+                selectedOptionView(binding.optionFour, 4)
+            }
+            R.id.submitButton -> {
+                if (mySelectedPos == 0) {
+                    myCurrentPos++
+
+                    when {
+                        myCurrentPos <= myQuestionsList!!.size -> {
+                            setQuestion()
+                        }
+                        else -> {
+                            val intent = Intent(this, ResultActivityR::class.java)
+                            intent.putExtra(Constants.USER_NAME, myUsername)
+                            intent.putExtra(Constants.CORRECT_ANSWERS, myCorrectAns)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, myQuestionsList!!.size)
+                            startActivity(intent)
+                            finish()
+                        }
+                    }
+                } else {
+                    val question = myQuestionsList?.get(myCurrentPos - 1)
+                    if (question!!.correctAnswers != mySelectedPos) {
+                        answerView(mySelectedPos, R.drawable.incorrect_option_border_bg)
+                    } else {
+                        myCorrectAns++
+                    }
+                    answerView(question.correctAnswers, R.drawable.correct_option_border_bg)
+
+                    if (myCurrentPos == myQuestionsList!!.size) {
+                        binding.submitButton.text = "Terminar"
+                    } else {
+                        binding.submitButton.text = "Ir a la siguiente pregunta"
+                    }
+                    mySelectedPos = 0
+                }
+            }
+        }
     }
 }
+

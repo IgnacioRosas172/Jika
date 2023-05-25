@@ -50,6 +50,16 @@
             android:layout_marginTop="-5dp"
             android:src="@drawable/ic_bookmark_24dp" />
 
+        <ImageView
+            android:id="@+id/checkEjercicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/check"
+            android:visibility="invisible" />
+
     </FrameLayout>
 
 </androidx.cardview.widget.CardView>

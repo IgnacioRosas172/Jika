@@ -24,6 +24,7 @@ class MainCard : AppCompatActivity() {
     private lateinit var binding: CardAdapterBinding
 
 
+
     private var mButton: Button? = null
     private var mViewPager: ViewPager? = null
     private var mCardAdapter: CardPagerAdapter? = null
