@@ -15,5 +15,8 @@
     <string name="text_3">El sonido r suave se representa con una sola letra r.</string>
     <string name="text_4">El sonido r fuerte entre vocales se representa con el díagrafo rr.</string>
 
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
 
 </resources>

@@ -14,4 +14,9 @@
     <color name="yellow">#f7b807</color>
     <color name="blackfondo">#141c24</color>
     <color name="blackfondofuerte">#1c2c34</color>
+    <color name="colorPrimary">#587983</color>
+    <color name="colorPrimaryLight">#9DB3B4</color>
+    <color name="colorPrimaryDark">#344B52</color>
+    <color name="colorAccent">#FAE8DA</color>
+    <color name="colorAccentDark">#C7B6A8</color>
 </resources>
