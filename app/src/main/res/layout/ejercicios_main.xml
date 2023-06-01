@@ -68,7 +68,9 @@
                 android:background="@color/green"
                 android:text="Comenzar"
                 android:textColor="@color/white"
-                android:textSize="18dp"></Button>
+                android:textSize="18dp">
+
+            </Button>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

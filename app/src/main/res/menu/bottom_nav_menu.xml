@@ -3,13 +3,13 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/usuario_selector"
+        android:icon="@drawable/aplicacion_selector"
         android:title="@string/title_home"
         android:background="@color/yellow"/>
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/aplicacion_selector"
+        android:icon="@drawable/usert"
         android:title="@string/title_dashboard"
         android:background="@color/yellow"/>
 

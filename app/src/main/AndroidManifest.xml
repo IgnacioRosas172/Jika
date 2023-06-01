@@ -12,6 +12,33 @@
         android:theme="@style/Theme.JIKA_E"
         tools:targetApi="31">
         <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaDiptongo"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaNucleo"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaConteo"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaArticulacion"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaConsonante"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionFoneticaRasgos"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.ResultActivityFonetica"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionFonetica"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuestionFonetica"
+            android:exported="false" />
+        <activity
             android:name=".paquetePrincipal.activities.QuestionSilaba"
             android:exported="false" />
         <activity
