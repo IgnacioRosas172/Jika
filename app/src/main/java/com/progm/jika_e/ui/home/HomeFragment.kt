@@ -53,11 +53,6 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-
-        }
 
 
         return root

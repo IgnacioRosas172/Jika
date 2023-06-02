@@ -15,10 +15,10 @@ import com.progm.jika_e.paquetePrincipal.constantes.Constantes
 import com.progm.jika_e.paquetePrincipal.constantes.Constants
 import kotlin.reflect.typeOf
 
-class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
+class QuizQuestionsActivityNew : AppCompatActivity() {
     private var userName: String? = null
 
-    private val questionsList: ArrayList<QuestionActividad> = Constantes.getQuestionsDiptongo()
+    private val questionsList: ArrayList<QuestionActividad> = Constantes.getQuestions()
     private var currentQuestionIndex = 0;
     private var selectedAlternativeIndex = -1;
     private var isAnswerChecked = false;
@@ -32,10 +32,11 @@ class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
     private var btnSubmit: Button? = null
     private var tvAlternatives: ArrayList<TextView>? = null
 
+    val quizCuestionsR = QuizCuestionsR()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_question_fonetica)
+        setContentView(R.layout.activity_quiz_questions)
 
         userName = intent.getStringExtra(Constants.USER_NAME)
 
@@ -51,7 +52,7 @@ class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
             findViewById(R.id.option_Four),
         )
 
-
+        quizCuestionsR.totalDelScore()
 
         updateQuestion()
 
@@ -130,7 +131,7 @@ class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
             alternativeTv.typeface = Typeface.DEFAULT
             alternativeTv.setTextColor(Color.parseColor("#7A8089"))
             alternativeTv.background = ContextCompat.getDrawable(
-                this@QuizQuestionsFoneticaDiptongo,
+                this@QuizQuestionsActivityNew,
                 R.drawable.default_option_border_bg
             )
         }
@@ -145,14 +146,14 @@ class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
         )
         option.setTypeface(option.typeface, Typeface.BOLD)
         option.background = ContextCompat.getDrawable(
-            this@QuizQuestionsFoneticaDiptongo,
+            this@QuizQuestionsActivityNew,
             R.drawable.selected_option_border_bg
         )
     }
 
     private fun answerView(view: TextView, drawableId: Int) {
         view.background = ContextCompat.getDrawable(
-            this@QuizQuestionsFoneticaDiptongo,
+            this@QuizQuestionsActivityNew,
             drawableId
         )
         tvAlternatives!![selectedAlternativeIndex].setTextColor(

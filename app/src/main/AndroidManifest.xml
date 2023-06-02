@@ -15,6 +15,12 @@
             android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaDiptongo"
             android:exported="false" />
         <activity
+            android:name=".paquetePrincipal.activities.ResultActivityNew"
+            android:exported="false" />
+        <activity
+            android:name=".paquetePrincipal.activities.QuizQuestionsActivityNew"
+            android:exported="false" />
+        <activity
             android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaNucleo"
             android:exported="false" />
         <activity

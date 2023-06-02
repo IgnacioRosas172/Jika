@@ -33,14 +33,26 @@
                     android:elevation="3dp"
                     android:src="@drawable/silaba"/>
 
+                <TextView
+                    android:id="@+id/completadoTextView"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:text="COMPLETADO"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="-30dp"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
 
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="100dp"
                     android:text="Sílaba faltante"
                     android:textColor="@color/white"
-                    android:layout_marginLeft="100dp"
                     android:textSize="23sp"
                     android:textStyle="bold" />
 

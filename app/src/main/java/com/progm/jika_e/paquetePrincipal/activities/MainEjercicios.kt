@@ -24,7 +24,7 @@ class MainEjercicios : AppCompatActivity() {
             if (binding.username.text.toString().isEmpty()) {
                 Toast.makeText(this, "Por faver elije un apodo!", Toast.LENGTH_SHORT).show()
             } else {
-                val intent = Intent(this, QuizQuestions::class.java)
+                val intent = Intent(this, QuizQuestionsActivityNew::class.java)
                 intent.putExtra(Constants.USER_NAME, binding.username.text.toString())
                 startActivity(intent)
                 finish()

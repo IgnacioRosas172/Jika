@@ -18,7 +18,7 @@ class ResultActivityFonetica : AppCompatActivity() {
         setContentView(view)
 
         val username = intent.getStringExtra(Constants.USER_NAME)
-        binding.userName.text = username
+        //binding.userName.text = username
         val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         binding.score.text = "Tu puntucación $correctAnswers es de $totalQuestions"

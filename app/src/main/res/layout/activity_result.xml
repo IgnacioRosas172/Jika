@@ -39,15 +39,7 @@
         android:textSize="25sp"
         android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/gris"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        tools:text="Username" />
+
 
     <TextView
         android:id="@+id/score"

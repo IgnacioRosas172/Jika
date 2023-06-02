@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import com.progm.jika_e.R
 import com.progm.jika_e.databinding.ActivityActividadInicioFoneticaBinding
 import com.progm.jika_e.databinding.EjerciciosMainBinding
@@ -23,6 +24,9 @@ class ActividadInicioFonetica : AppCompatActivity() {
         val btnIrAConteo: Button = findViewById(R.id.btnConteo)
         val btnIrANucleo: Button = findViewById(R.id.btnNucleo)
         val btnIrADiptongos: Button = findViewById(R.id.btnDiptongo)
+
+
+
 
         btnIrACuestionR.setOnClickListener {
             val intent = Intent(this, QuizCuestionsR::class.java)

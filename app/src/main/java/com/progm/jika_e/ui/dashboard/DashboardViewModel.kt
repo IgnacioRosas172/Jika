@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class DashboardViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Cerrar sesion"
+        value = "Cerrar sesión"
     }
     val text: LiveData<String> = _text
 }
