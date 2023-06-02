@@ -118,15 +118,7 @@ class QuizCuestionsR : AppCompatActivity() {
     }
 
 
-fun totalDelScore(){
-    val completadoTextView = findViewById<TextView>(R.id.completadoTextView)
 
-    if (totalScore == 5) {
-        completadoTextView.visibility = View.VISIBLE
-    } else {
-        completadoTextView.visibility = View.GONE
-    }
-}
 
 
 

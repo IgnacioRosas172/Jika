@@ -2,7 +2,6 @@ package com.progm.jika_e.paquetePrincipal.cards
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button

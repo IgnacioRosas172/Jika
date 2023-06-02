@@ -52,7 +52,7 @@ class QuizQuestionsActivityNew : AppCompatActivity() {
             findViewById(R.id.option_Four),
         )
 
-        quizCuestionsR.totalDelScore()
+
 
         updateQuestion()
 

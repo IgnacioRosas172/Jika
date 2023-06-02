@@ -14,10 +14,9 @@ class CardFragment: Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View? {
         val view: View = inflater.inflate(R.layout.card_fragment_adapter, container, false)
+
         mCardView = view.findViewById<View>(R.id.cardView) as CardView
         mCardView!!.setMaxCardElevation(mCardView!!.getCardElevation()
                 * CardAdapter.MAX_ELEVATION_FACTOR)

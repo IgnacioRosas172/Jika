@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager.widget.PagerAdapter
 import com.progm.jika_e.R
 import com.progm.jika_e.paquetePrincipal.activities.MainEjercicios
+import com.progm.jika_e.paquetePrincipal.activities.QuizQuestionsActivityNew
 import com.progm.jika_e.paquetePrincipal.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
 
 
@@ -25,7 +26,7 @@ class CardPagerAdapter : PagerAdapter(), CardAdapter {
 
 
     private fun goToExercise(context: Context) {
-        val intent = Intent(context, MainEjercicios::class.java)
+        val intent = Intent(context, QuizQuestionsActivityNew::class.java)
         context.startActivity(intent)
     }
 
