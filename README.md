@@ -4,6 +4,8 @@ Aplicación móvil como apoyo a la enseñanza del idioma español en educación 
 ## 🏞️ Screenshots
 
 ### Funcionamiento
+
+### Video
 [![Alt text](https://img.youtube.com/vi/8E6J3Lwd1VY/0.jpg)](https://www.youtube.com/watch?v=8E6J3Lwd1VY)
 
 ### Login
