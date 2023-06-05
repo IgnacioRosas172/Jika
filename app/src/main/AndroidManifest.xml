@@ -9,95 +9,68 @@
         android:icon="@mipmap/jika"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.JIKA_E"
+        android:theme="@style/JIKA_E"
         tools:targetApi="31">
         <activity
-            android:name=".SegundaActividadK"
+            android:name=".paquetePrincipal.ayuda.AyudaDiptongo"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaDiptongo"
+            android:name=".paquetePrincipal.ayuda.AyudaNucleo"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaNucleo"
+            android:name=".paquetePrincipal.ayuda.AyudaConteo"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaConteo"
+            android:name=".paquetePrincipal.ayuda.AyudaArticulacion"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaArticulacion"
+            android:name=".paquetePrincipal.ayuda.AyudaConsonante"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaConsonante"
+            android:name=".paquetePrincipal.ayuda.AyudaRasgos"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaRasgos"
+            android:name=".paquetePrincipal.ayuda.AyudaLetraMuda"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaLetraMuda"
+            android:name=".paquetePrincipal.ayuda.AyudaSilaba"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaSilaba"
+            android:name=".paquetePrincipal.ayuda.AyudaActivity"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.AyudaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaDiptongo"
+            android:name=".paquetePrincipal.quiz.QuizQuestionsFoneticaDiptongo"
             android:exported="false" />
         <activity
             android:name=".paquetePrincipal.activities.ResultActivityNew"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionsActivityNew"
+            android:name=".paquetePrincipal.quiz.QuizQuestionsActivityNew"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaNucleo"
+            android:name=".paquetePrincipal.quiz.QuizQuestionsFoneticaNucleo"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaConteo"
+            android:name=".paquetePrincipal.quiz.QuizQuestionsFoneticaConteo"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaArticulacion"
+            android:name=".paquetePrincipal.quiz.QuizQuestionsFoneticaArticulacion"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionsFoneticaConsonante"
+            android:name=".paquetePrincipal.quiz.QuizQuestionsFoneticaConsonante"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionFoneticaRasgos"
+            android:name=".paquetePrincipal.quiz.QuizQuestionFoneticaRasgos"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.ResultActivityFonetica"
-            android:exported="false" />
-        <activity
-            android:name=".paquetePrincipal.activities.QuizQuestionFonetica"
-            android:exported="false" />
-        <activity
-            android:name=".paquetePrincipal.activities.QuestionFonetica"
-            android:exported="false" />
-        <activity
-            android:name=".paquetePrincipal.activities.QuestionSilaba"
-            android:exported="false" />
-        <activity
-            android:name=".paquetePrincipal.activities.ResultActivityR"
+            android:name=".paquetePrincipal.quiz.QuizQuestionFonetica"
             android:exported="false" />
         <activity
             android:name=".paquetePrincipal.activities.ActividadInicioFonetica"
             android:exported="false" />
         <activity
-            android:name=".paquetePrincipal.activities.QuizCuestionsR"
+            android:name=".paquetePrincipal.quiz.QuizCuestionsR"
             android:exported="false" />
-        <activity
-            android:name=".paquetePrincipal.activities.MainEjercicios"
-            android:exported="false"
-            android:label="Main Ejercicios" />
-        <activity
-            android:name=".paquetePrincipal.activities.QuizQuestions"
-            android:exported="false"
-            android:label="Quiz Questions" />
-        <activity
-            android:name=".paquetePrincipal.activities.ResultActivity"
-            android:exported="false"
-            android:label="Result activitie" />
         <activity
             android:name=".paquetePrincipal.cards.MainCard"
             android:exported="false"
@@ -106,9 +79,6 @@
             android:name=".iniciomenu"
             android:exported="false"
             android:label="@string/title_activity_iniciomenu" />
-        <activity
-            android:name=".paquetePrincipal.activities.Inicio"
-            android:exported="false" />
         <activity
             android:name=".paquetePrincipal.activities.ProfileActivity"
             android:exported="false" />

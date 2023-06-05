@@ -4,11 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import com.progm.jika_e.R
 import com.progm.jika_e.databinding.ActivityActividadInicioFoneticaBinding
-import com.progm.jika_e.databinding.EjerciciosMainBinding
-import com.progm.jika_e.paquetePrincipal.constantes.Constants
+import com.progm.jika_e.paquetePrincipal.quiz.*
 
 class ActividadInicioFonetica : AppCompatActivity() {
     private lateinit var binding: ActivityActividadInicioFoneticaBinding

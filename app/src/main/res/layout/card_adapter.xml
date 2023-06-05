@@ -23,14 +23,16 @@
                 android:id="@+id/titleTextView"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/contentTextView"
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"/>
+                android:layout_marginTop="24dp"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/btnComenzar"
@@ -38,7 +40,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:background="@color/azul"
-                android:text="Comenzar" />
+                android:text="Comenzar"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <ImageView

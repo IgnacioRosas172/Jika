@@ -2,7 +2,6 @@ package com.progm.jika_e.paquetePrincipal.constantes
 
 import com.progm.jika_e.R
 import com.progm.jika_e.paquetePrincipal.activities.QuestionActividad
-import com.progm.jika_e.paquetePrincipal.activities.QuestionSilaba
 
 object Constantes {
     val USER_NAME: String = "user_name"

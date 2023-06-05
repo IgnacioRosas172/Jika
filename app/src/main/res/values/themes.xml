@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.JIKA_E" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="JIKA_E" parent="Theme.MaterialComponents">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/gris</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -15,8 +15,8 @@
         <item name="colorControlActivated">@color/white</item>
         <item name="colorControlHighlight">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
-        <item name="windowActionBar">false</item>
-        <item name = "android:windowNoTitle">true</item>
+
+
 
         <item name="textInputStyle">@style/AppTheme.TextInput</item>
         <item name="materialButtonStyle">@style/AppTheme.Button</item>
@@ -24,34 +24,22 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="EditTextGrey" parent="TextAppearance.AppCompat">
-        <item name="colorControlNormal">@color/grey_dark</item>
-        <item name="colorControlActivated">@color/grey_dark</item>
-        <item name="colorControlHighlight">@color/grey_dark</item>
-        <item name="android:textColorHint">@color/grey_dark</item>
-        <item name="colorAccent">@color/grey_dark</item>
-        <item name="android:textColorPrimary">@color/grey_dark</item>
-        <item name="colorSecondary">@color/grey_dark</item>
-        <item name="colorOnPrimary">@color/grey_dark</item>
-    </style>
 
     <style name="AppTheme.TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/text_input</item>
         <item name="boxStrokeWidth">2dp</item>
         <item name="hintTextColor">@color/colorAccent</item>
-        <item name="android:textColorHint">@color/text_input_hint</item>
-        <item name="endIconTint">@color/colorAccentDark</item>
+
     </style>
 
     <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
         <item name="elevation">0dp</item>
-        <item name="backgroundTint">@color/button</item>
-        <item name="android:textColor">@color/button_text</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="AppTheme.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
-
 </resources>

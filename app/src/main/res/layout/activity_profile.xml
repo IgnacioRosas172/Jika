@@ -12,7 +12,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/green" />
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="PERFIL DE USUARIO"
             android:textAlignment="center"
-            android:textColor="@color/grey_dark"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="22sp"
             android:layout_marginTop="30dp"/>
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="correo elctronico"
-            android:textColor="@color/grey_dark"
+            android:textColor="@color/white"
             android:layout_gravity="bottom"
             android:gravity="center"
             android:textStyle="italic"
@@ -68,20 +68,21 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
-            style="@style/EditTextGrey"
-            app:hintTextColor="@color/grey_dark"
             app:startIconDrawable="@drawable/ic_little_person"
-            app:startIconTint="@color/grey_dark">
+            app:backgroundTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nombre"
-                android:textColorHint="@color/grey_dark"
                 android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="@color/white"
+                android:textColorLink="#FFFFFF"
                 android:textSize="13sp"
-                android:textColor="@color/grey_dark" />
+                app:backgroundTint="@color/white"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,20 +93,21 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="5dp"
-            style="@style/EditTextGrey"
-            app:hintTextColor="@color/grey_dark"
+
             app:startIconDrawable="@drawable/ic_little_person_outline"
-            app:startIconTint="@color/grey_dark">
+
+            app:backgroundTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldLastname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Apellido"
-                android:textColorHint="@color/grey_dark"
+                android:textColorHint="@color/white"
                 android:inputType="text"
                 android:textSize="13sp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/white"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -116,91 +118,25 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="5dp"
-            style="@style/EditTextGrey"
-            app:hintTextColor="@color/grey_dark"
+
             app:startIconDrawable="@drawable/ic_phone_white"
-            app:startIconTint="@color/grey_dark">
+
+            app:backgroundTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textFieldPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Telefono"
-                android:textColorHint="@color/grey_dark"
+                android:textColorHint="@color/white"
                 android:inputType="phone"
                 android:textSize="13sp"
-                android:textColor="@color/grey_dark" />
+                android:textColor="@color/white"
+                app:backgroundTint="@color/white"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp"
-            style="@style/EditTextGrey"
-            app:hintTextColor="@color/grey_dark"
-            app:startIconDrawable="@drawable/ic_car"
-            app:startIconTint="@color/grey_dark">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textFieldCarBrand"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Marca del vehiculo"
-                android:textColorHint="@color/grey_dark"
-                android:inputType="text"
-                android:textSize="13sp"
-                android:textColor="@color/grey_dark" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp"
-            style="@style/EditTextGrey"
-            app:hintTextColor="@color/grey_dark"
-            app:startIconDrawable="@drawable/ic_color"
-            app:startIconTint="@color/grey_dark">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textFieldCarColor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Color del vehiculo"
-                android:textColorHint="@color/grey_dark"
-                android:inputType="text"
-                android:textSize="13sp"
-                android:textColor="@color/grey_dark" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp"
-            style="@style/EditTextGrey"
-            app:hintTextColor="@color/grey_dark"
-            app:startIconDrawable="@drawable/ic_number"
-            app:startIconTint="@color/grey_dark">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textFieldCarPlate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Placa del vehiculo"
-                android:textColorHint="@color/grey_dark"
-                android:inputType="text"
-                android:textSize="13sp"
-                android:textColor="@color/grey_dark" />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
@@ -211,10 +147,12 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:text="ACTUALIZAR INFORMACION"
+        android:layout_marginTop="20dp"
+        android:text="Cerrar sesión"
         android:layout_marginBottom="50dp"
         android:layout_gravity="bottom"
         android:background="@drawable/rounded_button"
+        app:backgroundTint="@color/green"
         />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

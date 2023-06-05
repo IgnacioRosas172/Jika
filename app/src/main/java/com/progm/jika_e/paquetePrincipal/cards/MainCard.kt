@@ -5,18 +5,11 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.CheckBox
-import android.widget.CompoundButton
-import android.widget.ImageButton
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.progm.jika_e.R
 
 import com.progm.jika_e.databinding.CardAdapterBinding
-
-import com.progm.jika_e.iniciomenu
-import com.progm.jika_e.paquetePrincipal.activities.MainEjercicios
 
 class MainCard : AppCompatActivity() {
 

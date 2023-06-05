@@ -1,19 +1,16 @@
-package com.progm.jika_e.paquetePrincipal.activities
+package com.progm.jika_e.paquetePrincipal.quiz
 
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import com.progm.jika_e.R
+import com.progm.jika_e.paquetePrincipal.activities.QuestionActividad
+import com.progm.jika_e.paquetePrincipal.activities.ResultActivityNew
 import com.progm.jika_e.paquetePrincipal.constantes.Constantes
-import com.progm.jika_e.paquetePrincipal.constantes.Constants
-import kotlin.reflect.typeOf
 
 class QuizQuestionFoneticaRasgos : AppCompatActivity() {
     private var userName: String? = null
@@ -37,7 +34,7 @@ class QuizQuestionFoneticaRasgos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question_fonetica)
 
-        userName = intent.getStringExtra(Constants.USER_NAME)
+
 
         tvQuestion = findViewById(R.id.mainQuestion)
         ivImage = findViewById(R.id.mainImage)

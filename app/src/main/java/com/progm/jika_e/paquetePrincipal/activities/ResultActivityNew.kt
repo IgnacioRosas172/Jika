@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import com.progm.jika_e.R
 import com.progm.jika_e.databinding.ActivityProfileBinding
 import com.progm.jika_e.paquetePrincipal.constantes.Constantes
-import com.progm.jika_e.paquetePrincipal.constantes.Constants
 import com.progm.jika_e.paquetePrincipal.models.Client
 import com.progm.jika_e.paquetePrincipal.providers.AuthProvider
 import com.progm.jika_e.paquetePrincipal.providers.ClientProvider

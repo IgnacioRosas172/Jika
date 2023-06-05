@@ -35,11 +35,20 @@
         app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <Button
         android:id="@+id/buttonOrtografia"
-        style="@style/Widget.AppCompat.Button"
+        android:layout_width="130dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="364dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"/>
+
+    <ImageView
         android:layout_width="130dp"
         android:layout_height="128dp"
         android:layout_marginTop="364dp"
@@ -47,19 +56,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="135dp"
-        android:layout_height="119dp"
-        android:background="@drawable/communication"
+        android:layout_height="139dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617" />
+        app:layout_constraintVertical_bias="0.617"
+        android:background="@android:color/transparent"/>
+
 
     <TextView
         android:id="@+id/text_fonetica"
@@ -77,6 +88,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.494" />
+
+   <ImageView
+       android:layout_width="135dp"
+       android:layout_height="119dp"
+       android:background="@drawable/communication"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.159"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.617"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

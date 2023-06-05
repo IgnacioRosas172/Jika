@@ -1,24 +1,21 @@
-package com.progm.jika_e.paquetePrincipal.activities
+package com.progm.jika_e.paquetePrincipal.quiz
 
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import com.progm.jika_e.R
+import com.progm.jika_e.paquetePrincipal.activities.QuestionActividad
+import com.progm.jika_e.paquetePrincipal.activities.ResultActivityNew
 import com.progm.jika_e.paquetePrincipal.constantes.Constantes
-import com.progm.jika_e.paquetePrincipal.constantes.Constants
-import kotlin.reflect.typeOf
 
-class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
+class QuizQuestionsFoneticaConsonante : AppCompatActivity() {
     private var userName: String? = null
 
-    private val questionsList: ArrayList<QuestionActividad> = Constantes.getQuestionsDiptongo()
+    private val questionsList: ArrayList<QuestionActividad> = Constantes.getQuestionsConsonante()
     private var currentQuestionIndex = 0;
     private var selectedAlternativeIndex = -1;
     private var isAnswerChecked = false;
@@ -36,8 +33,6 @@ class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question_fonetica)
-
-        userName = intent.getStringExtra(Constants.USER_NAME)
 
         tvQuestion = findViewById(R.id.mainQuestion)
         ivImage = findViewById(R.id.mainImage)
@@ -130,7 +125,7 @@ class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
             alternativeTv.typeface = Typeface.DEFAULT
             alternativeTv.setTextColor(Color.parseColor("#7A8089"))
             alternativeTv.background = ContextCompat.getDrawable(
-                this@QuizQuestionsFoneticaDiptongo,
+                this@QuizQuestionsFoneticaConsonante,
                 R.drawable.default_option_border_bg
             )
         }
@@ -145,14 +140,14 @@ class QuizQuestionsFoneticaDiptongo : AppCompatActivity() {
         )
         option.setTypeface(option.typeface, Typeface.BOLD)
         option.background = ContextCompat.getDrawable(
-            this@QuizQuestionsFoneticaDiptongo,
+            this@QuizQuestionsFoneticaConsonante,
             R.drawable.selected_option_border_bg
         )
     }
 
     private fun answerView(view: TextView, drawableId: Int) {
         view.background = ContextCompat.getDrawable(
-            this@QuizQuestionsFoneticaDiptongo,
+            this@QuizQuestionsFoneticaConsonante,
             drawableId
         )
         tvAlternatives!![selectedAlternativeIndex].setTextColor(

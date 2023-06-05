@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager.widget.PagerAdapter
 import com.progm.jika_e.R
-import com.progm.jika_e.paquetePrincipal.activities.MainEjercicios
-import com.progm.jika_e.paquetePrincipal.activities.QuizQuestionsActivityNew
+import com.progm.jika_e.paquetePrincipal.quiz.QuizQuestionsActivityNew
 import com.progm.jika_e.paquetePrincipal.cards.CardAdapter.Companion.MAX_ELEVATION_FACTOR
 
 
@@ -93,9 +91,6 @@ class CardPagerAdapter : PagerAdapter(), CardAdapter {
 
     }
 
-    fun abrirCardOrtografia(context: Context, view: View) {
-        val intent = Intent(context, MainEjercicios::class.java).apply{ }
-        context.startActivity(intent)
-    }
+
 
 }
